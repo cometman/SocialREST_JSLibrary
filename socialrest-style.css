@@ -1,0 +1,64 @@
+ #socialrest-share-widget {
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+	font-size: 11px;
+	max-width: 80px;
+}
+ .blueButton{
+	background: #4c69ba;
+	background: -webkit-gradient(linear, center top, center bottom, from(#4c69ba), to(#3b55a0));
+	background: -webkit-linear-gradient(#4c69ba, #3b55a0);
+	border: none;
+	-webkit-border-radius: 2px;
+	color: #fff;
+	height: 20px;
+	line-height: 20px;
+	text-shadow: 0 -1px 0 #354c8c;
+	max-width: 63px;
+}
+
+.pluginButtonImage {
+	background: url(fb-sprite.png) -389px -180px;
+	background-size: auto;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 14px;
+	width: 17px;
+	margin-top: 3px;
+}
+
+.pluginButtonLabel{
+	padding-left: 26px;
+	position: absolute;
+	margin-top: -3px;
+}
+
+#share-content-window{
+	display: none;
+	min-width: 320px;
+	min-height: 200px;
+	background-color: white;
+	position: fixed;
+	left: 50%;
+	margin-top: 15%;
+}
+
+#inner-content{
+	
+}
+
+.fade-back-share {
+	opacity: .5;
+	/*background-color: rgba(197,197,197,0.5);*/
+}
+
+#opacity-share-container{
+	position: absolute;
+	display: none;
+	background-color: black;
+	opacity: .5;
+	height: 150%;
+	width: 150%;
+	overflow: visible;
+	margin-top: -100px;
+	margin-left: -100px;
+}
