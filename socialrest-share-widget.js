@@ -8,41 +8,25 @@ var host = "localhost:3000"
 var srURL = "http://" + host + "/api/impressions"
 
 $(document).ready(function(){
-	
-	// findIntegrationPoints();
+
+	findIntegrationPoints();
 
 	$(".fbshare").click(function(){
-		// $("#share-content-window").toggle("drop", 0);
-		$("#opacity-share-container").toggle("size", 0);
-		// $("#share-content-window").css("margin-left", $("#share-content-window").width()/2 * -1);		console.log("Clicked me!");
 		facebookShareUI();
 	});
-
-	$("#opacity-share-container").click(function(){
-		// $("#share-content-window").toggle();
-		$("#opacity-share-container").toggle();
-	});
-
 	loadFacebook();
 });
 
 function findIntegrationPoints()
 {
-	var elements = $("#socialrest-share-widget");
+	var elements = $("#socialrest-fb-share-widget");
+
+	// Only one Facebook integration per page
 	if (elements !== null && elements.length > 0)
 	{
-		for (i = 0; i <= elements.length-1; i++)
-		{
-			$("#socialrest-share-widget").append("<a href='#' class='fbshare'> <div class='blueButton'> <div class='pluginButtonImage'> <span class='pluginButtonLabel'>Share</span> </div> </div> </a> "); 
-		}
+		$("#socialrest-fb-share-widget").append("<a href='#' class='fbshare'> <div class='blueButton'> <div class='pluginButtonImage'> <span class='pluginButtonLabel'>Share</span> </div> </div> </a> ");
 	}
 }
-
-function appendFacebookButton(element)
-{
-	// element./
-}
-
 
 function loadFacebook()
 {
@@ -57,9 +41,7 @@ function loadFacebook()
   	$.getScript('https://connect.facebook.net/en_UK/all.js', function(){
 	    FB.init({
 	      appId: site_appid,
-	    });     
-    // $('#loginbutton,#feedbutton').removeAttr('disabled');
-    // FB.getLoginStatus(updateStatusCallback);
+	    });
   });
 }
 
@@ -77,12 +59,9 @@ function facebookShareUI()
 	    if (response && response.post_id) {
 	      console.log("Post was published!");
 	      console.log(response);
-	      $("#opacity-share-container").toggle();
 	      saveGraphObject(response.post_id);
 	    } else {
-	    // $("#share-content-window").toggle();
-		$("#opacity-share-container").toggle();
-	      // alert('Post was not published.');
+	    	// Something went wrong..
 	    }
 	  }
 	);
@@ -108,7 +87,7 @@ function saveGraphObject(object_id)
 			console.log("Success!");
 			console.log(data);
 			console.log(text);
-       		
+
     	},
 	    error: function (request, status, error) {
 	    	console.log("FAILURE!");

@@ -1,4 +1,4 @@
- #socialrest-share-widget {
+ #socialrest-fb-share-widget {
 	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
 	font-size: 11px;
 	max-width: 80px;
@@ -30,35 +30,4 @@
 	padding-left: 26px;
 	position: absolute;
 	margin-top: -3px;
-}
-
-#share-content-window{
-	display: none;
-	min-width: 320px;
-	min-height: 200px;
-	background-color: white;
-	position: fixed;
-	left: 50%;
-	margin-top: 15%;
-}
-
-#inner-content{
-	
-}
-
-.fade-back-share {
-	opacity: .5;
-	/*background-color: rgba(197,197,197,0.5);*/
-}
-
-#opacity-share-container{
-	position: absolute;
-	display: none;
-	background-color: black;
-	opacity: .5;
-	height: 150%;
-	width: 150%;
-	overflow: visible;
-	margin-top: -100px;
-	margin-left: -100px;
 }
