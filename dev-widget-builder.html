@@ -1,16 +1,22 @@
 <head>
-<link type="text/css" rel="stylesheet" href="socialrest-style.css"/>
-<script src="jquery/jquery.min.js"></script>
-<script src="jquery/jquery-ui-1.10.3.custom.min.js"></script>
-<link type="text/css" rel="stylesheet" href="jquery/jquery-ui-1.10.3.custom.min.css"/>
-<script src="socialrest-share-widget.js"></script>
+	<link type="text/css" rel="stylesheet" href="socialrest-style.css"/>
+	<script src="jquery/jquery.min.js"></script>
+	<script src="jquery/jquery-ui-1.10.3.custom.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="jquery/jquery-ui-1.10.3.custom.min.css"/>
+	<script src="socialrest-share-widget.js"></script>
 
-<meta property="og:title" content="The Widget Development"/>
-<meta property="og:site_name" content="Local Fortress"/>
-<meta property="og:url" content="http://socialrest.me/localdev"/>
-<meta property="og:description" content="A Description is exactly what you think it is!"/>
-<meta property="og:image" content="http://rack.0.mshcdn.com/media/ZgkyMDEzLzEyLzIzL2M4L0dpcmxzU2VsZmllLmFkYzg3LmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/a60475fc/f33/Girls-Selfie.jpg"/>
-<meta property="og:app_id" content="449874311802483"/>
+	<!-- Facebook -->
+	<meta property="og:title" content="The Widget Development"/>
+	<meta property="og:site_name" content="Local Fortress"/>
+	<meta property="og:url" content="http://socialrest.me/localdev"/>
+	<meta property="og:description" content="A Description is exactly what you think it is!"/>
+	<meta property="og:image" content="http://rack.0.mshcdn.com/media/ZgkyMDEzLzEyLzIzL2M4L0dpcmxzU2VsZmllLmFkYzg3LmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/a60475fc/f33/Girls-Selfie.jpg"/>
+	<meta property="og:app_id" content="449874311802483"/>
+
+	<!-- Twitter -->
+	<meta name="twitter:card" value="summary"/>
+	<meta name="twitter:site" value="@SocialREST"/>
+	<meta name="twitter:creator" value="@clay_selby"/>
 
 </head>
 
@@ -27,4 +33,10 @@
 
 	<div id="socialrest-fb-share-widget">
 	</div>
+
+	<fb:login-button show-faces="true" width="200" max-rows="1" scope="read_stream"></fb:login-button>
+
+	<div id="socialrest-tw-share-widget">
+	</div>
+
 </body>
