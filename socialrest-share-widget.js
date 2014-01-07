@@ -3,7 +3,7 @@
 // 12-21/2013
 
 var site_name, site_title, site_url, site_description, site_image, site_appid;
-var srtoken = "953063";
+var srtoken = "394679";
 var tw_account = "clay_selby";
 var appid = "1";
 var host = "localhost:3000"
@@ -49,12 +49,12 @@ function loadTwitter()
 function addTwitterShareButton()
 {
 	var link = document.location.href;
-	// Add the SR Token and a Referrer string to the end of the URL.
-	var ref = srtoken + "_" + new Date().getTime() +  Math.floor(Math.random()*100000)
-	var appender = "&ref=";
+	// Add the SR Token
+	var ref = srtoken + "_";
+	var appender = "&srtk=";
 	if (link.indexOf("?") == -1)
 	{
-		appender = "?ref=";
+		appender = "?srtk=";
 	}
 	generated_link = link+appender+ref;
 	twttr.widgets.createShareButton(
