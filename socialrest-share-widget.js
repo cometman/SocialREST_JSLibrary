@@ -3,11 +3,11 @@
 // 12-21/2013
 
 var site_name, site_title, site_url, site_description, site_image, site_appid;
-var srtoken = "394679";
+var srtoken = "623692";
 var tw_account = "clay_selby";
 var appid = "1";
 var host = "localhost:3000"
-var srURL = "http://" + host + "/api/impressions"
+var srURL = "http://" + host + "/api/impressions?srtk=" + srtoken + "_";
 var sr_user_create = "http://" + host + "/api/users"
 // Link use for the tweet share button
 var generated_link;
@@ -50,12 +50,10 @@ function addTwitterShareButton()
 {
 	var link = document.location.href;
 	// Add the SR Token
-	var ref = srtoken + "_";
-	var appender = "&srtk=";
-	if (link.indexOf("?") == -1)
-	{
-		appender = "?srtk=";
-	}
+	var ref = srtoken + "_" + (new Date).getTime() + "_" + randomString(16);
+
+	var appender = getAppender(link);
+
 	generated_link = link+appender+ref;
 	twttr.widgets.createShareButton(
 		  generated_link,
@@ -105,7 +103,7 @@ function facebookShareUI()
 	   method: 'feed',
 	   name: site_title,
 	   description: site_description,
-	   link: site_url,
+	   link: site_url + getAppender(site_url) + srtoken + "_" + (new Date).getTime() + "_" + randomString(16),
 	   picture: site_image
 	  },
 	  function(response) {
@@ -120,6 +118,15 @@ function facebookShareUI()
 	);
 }
 
+function getAppender(link)
+{
+	var appender = "&srtk=";
+	if (link.indexOf("?") == -1)
+	{
+		appender = "?srtk=";
+	}
+	return appender;
+}
 function saveGraphObject(object_id, network)
 {
 	var data = {};
@@ -219,4 +226,11 @@ function saveFacebookUser(response)
 		    }
 		});
       });
+}
+
+function randomString(length) {
+	var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var result = '';
+    for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
+    return result;
 }
