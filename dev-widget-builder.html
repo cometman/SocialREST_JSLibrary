@@ -8,10 +8,10 @@
 	<!-- Facebook -->
 	<meta property="og:title" content="The Widget Development"/>
 	<meta property="og:site_name" content="Local Fortress"/>
-	<meta property="og:url" content="http://socialrest.me/localdev"/>
+	<meta property="og:url" content="http://socialtests.com/SocialREST_JSLibrary/dev-widget-builder.html#"/>
 	<meta property="og:description" content="A Description is exactly what you think it is!"/>
 	<meta property="og:image" content="http://rack.0.mshcdn.com/media/ZgkyMDEzLzEyLzIzL2M4L0dpcmxzU2VsZmllLmFkYzg3LmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/a60475fc/f33/Girls-Selfie.jpg"/>
-	<meta property="og:app_id" content="449874311802483"/>
+	<meta property="og:app_id" content="332325893534538"/>
 
 	<!-- Twitter -->
 	<meta name="twitter:card" value="summary"/>
@@ -20,11 +20,9 @@
 
 </head>
 
-<body>
+<body style="background-color: lightblue;">
 	<div id="fb-root"></div>
-	<div id="opacity-share-container">
-
-	</div>
+	<div id="opacity-share-container"></div>
 
 	<div id="share-content-window">
 		<div id="inner-content">
@@ -33,10 +31,24 @@
 
 	<div id="socialrest-fb-share-widget">
 	</div>
-
-	<fb:login-button show-faces="true" width="200" max-rows="1" scope="read_stream"></fb:login-button>
+	<div id="back-lightbox" style="background: rgba(0,40,90,0.3); width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 1; font-weight: 300;"> </div>
+	<div id="loginSocialWindow" style="width: 70%; min-height: 150px; margin-left: 10%; text-align: left; font-family: 'Helvetica Neue', Helvetica, Arial; line-height: 1.5; font-size: 24px; border-style: solid; border: 1px solid #8498b0; -webkit-box-shadow: rgba(0,0,0,0.5) 0px 0px 8px; -moz-box-shadow: rgba(0,0,0,0.5) 0px 0px 8px; box-shadow: rgba(0,0,0,0.5) 0px 0px 8px; color: #1F80C8; padding: 20px; background-color: white; position: absolute; z-index: 10; font-weight: 300;">
+		<div onclick="promptUserSocialLogin()" style="float: right; background-color: rgb(195, 194, 194); font-size: 17px; height: 26px; width: 28px; color: white; border-radius: 20px;"><div style="font-size: 25px; margin-top: -8px; margin-left: 7px;">x</div></div> 
+		<div>Connect with <span>ontap</span><span style="color: gray;">.me</span></div>
+		<div style="color: rgb(128, 81, 81);">Log in with Facebook</div>
+		<hr/>
+		<fb:login-button show-faces="true" width="200" max-rows="1" scope="read_stream"></fb:login-button>
+		<div style="float: right; font-size: 14px; margin-top: -24px;"> <ul>
+				<li>Become a VIP</li>
+				<li>First to Know - Product Enhancements</li>
+				<li>Monks Newsletter</li>
+			</ul>
+		</div>
+	</div>
+	
 
 	<div id="socialrest-tw-share-widget">
 	</div>
 
+	<div id="toggletest" href="#" onclick="promptUserSocialLogin()">Test Link</div>
 </body>
